@@ -1,9 +1,9 @@
 <template>
     <div>
         <header class="page-header fixed-header">
-		<input type="search"  /> 
+		<input type="search" v-model="keywords" /> 
 		<span>
-			<img src="../../assets/images/serach.png"/>
+			<img @click="search" src="../../assets/images/serach.png"/>
 		</span>
 	</header>
 	
@@ -114,3 +114,25 @@
 	
     </div>
 </template>
+
+<script>
+export default {
+	data(){
+		return{
+			keywords:'',
+		}
+	},
+	methods:{
+		search(){
+			// 去点空格   只是空格的时候不让跳转
+            var keywords = this.keywords.trim();
+			if(keywords!=''){
+				this.$router.push('/search?keywords='+this.keywords)
+			}
+			
+		}
+	}
+}
+</script>
+
+

@@ -6,23 +6,18 @@
 	
 	<div class="contaniner fixed-contb">
 		<figure class="ban swiper-container">
-			<ul class="swiper-wrapper">
-				<li class="swiper-slide">
-					<a href="#">
+			<wv-swipe class="swiper-wrapper" :height="225" :autoplay="4000">
+				<wv-swipe-item class="swiper-slide"><a href="#">
 						<img src="../../assets/images/index-ban01.png"/>
-					</a>
-				</li>
-				<li class="swiper-slide">
-					<a href="#">
+					</a></wv-swipe-item>
+				<wv-swipe-item class="swiper-slide"><a href="#">
 						<img src="../../assets/images/index-ban02.png"/>
-					</a>
-				</li>
-				<li class="swiper-slide">
-					<a href="#">
+					</a></wv-swipe-item>
+				<wv-swipe-item class="swiper-slide"><a href="#">
 						<img src="../../assets/images/index-ban03.png"/>
-					</a>
-				</li>
-			</ul>
+					</a></wv-swipe-item>
+			</wv-swipe>
+			
 		</figure>
 		
 		<section class="shop">

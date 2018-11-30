@@ -32,7 +32,11 @@ export default new Router({
         {
           path: '/profile',
           name: 'profile',
-          component: () => import('./views/index/profile.vue')
+          component: () => import('./views/index/profile.vue'),
+
+          meta:{
+             needLogin:true
+          }
         },
       ]
     },
@@ -43,6 +47,30 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('./views/Regist.vue')
+    },
+    {
+      path: '/login',
+      name: 'login',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('./views/Login.vue')
+    },
+    {
+      path: '/search',
+      name: 'search',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('./views/Search.vue')
+    },
+    {
+      path: '/goods',
+      name: 'goods',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('./views/goods.vue')
     }
   ]
 })
